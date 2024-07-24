@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mytodolist/home_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +12,7 @@ class WelcomeScreen extends StatelessWidget {
         toolbarHeight: 40,
         centerTitle: false,
         titleSpacing: 10,
-        title: Text("Welcome Screen",
+        title: const Text("Welcome Screen",
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
         backgroundColor: Colors.white,
       ),
@@ -19,43 +21,43 @@ class WelcomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              Image(
+              const Image(
                 image: AssetImage('assets/images/moon.png'),
                 //height: 350,
                 //width: 35,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60,
               ),
-              Text(
+              const Text(
                 "To-Do List",
                 style: TextStyle(
                   fontSize: 44,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 30),
-              Text(
+              const SizedBox(height: 30),
+              const Text(
                 "Welcome to TaskMaster! Organize your tasks, set priorities, and achieve your goals effortlessly. Let's make every day productive and fulfilling!",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(400, 60),
+                  minimumSize: const Size(400, 60),
                 ),
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => HomeScreen(),
+                      builder: (context) => const HomeScreen(),
                     ),
                   );
                 },
-                child: Text("Get Started"),
+                child: const Text("Get Started"),
               ),
             ],
           ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -15,43 +17,43 @@ class _HomeScreenState extends State<HomeScreen> {
         toolbarHeight: 40,
         centerTitle: false,
         titleSpacing: 0,
-        title: Text(
+        title: const Text(
           "Home Screen",
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(
+        child: SizedBox(
           height: 300,
           width: 400,
           child: Column(
             children: [
-              Text(
+              const Text(
                 "Tasks",
                 style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
                 textAlign: TextAlign.justify,
               ),
-              Text(
+              const Text(
                 "Create your categorised task board",
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               TextFormField(
                 controller: myText,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     labelText: "Enter your task here and click on Save!",
                     enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.black))),
                 minLines: 1,
                 maxLines: 3,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {},
-                child: Text("Save"),
+                child: const Text("Save"),
               )
             ],
           ),
